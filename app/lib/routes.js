@@ -10,3 +10,25 @@ Router.route('/', {
   action: 'action',
   where: 'client'
 });
+
+Router.route('/todos/:_id', {
+  name: 'todos.detail',
+  controller: 'TodosController',
+  action: 'details',
+  where: 'client'
+});
+
+Router.route('/todos/:_id/edit', {
+  name: 'todos.edit',
+  controller: 'TodosController',
+  action: 'edit',
+  where: 'client'
+})
+
+
+Router.route('/users/:_id', {
+  name: 'users.detail',
+  controller: 'UsersController',
+  action: 'detail',
+  where: 'client'
+});

@@ -1,0 +1,17 @@
+<template name="TodosList">
+  <div class="todos-panel">
+    {{> CreateTodoItem}}
+    <div class="wrap">
+      <h3>My todos <small class="count">({{> TodosCount}})</small></h3>
+      <ul class="todos-list">
+        {{#each todos}}
+          <li class="todo-item {{isDoneClass}}">
+            {{> TodoItem}}
+          </li>
+        {{else}}
+          <li class="todo-item empty"><span class="text-muted">No todos yet! Sign up to create one.</span></li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</template>

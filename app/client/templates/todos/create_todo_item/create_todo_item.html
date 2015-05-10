@@ -1,0 +1,9 @@
+<template name="CreateTodoItem">
+  <form class="create-todo">
+    {{#if currentUser}}
+      <input type="text" placeholder="Create a new todo..."/>
+    {{else}}
+      <input type="text" placeholder="Sign in/up to create a new todo" readonly />
+    {{/if}}
+  </form>
+</template>

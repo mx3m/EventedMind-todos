@@ -1,0 +1,14 @@
+<template name="UsersList">
+  <div class="wrap">
+    <h3>Users</h3>
+    <ul class="list">
+      {{#each users}}
+        <li class="user">
+          {{#linkTo route='users.detail'}}
+            {{profile.name}}
+          {{/linkTo}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</template>

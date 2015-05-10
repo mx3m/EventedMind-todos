@@ -1,0 +1,12 @@
+<template name="TodoItem">
+  <label class="done" for="{{id}}">
+    <input type="checkbox" id="{{id}}" name="isDone" {{isDoneChecked}} />
+  </label>
+  <div class="subject">
+    {{#linkTo route='todos.detail'}}
+      {{subject}}
+    {{/linkTo}}
+  </div>
+  <div class="action">
+  </div>
+</template>

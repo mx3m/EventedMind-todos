@@ -1,0 +1,18 @@
+<template name="header">
+  <header class="app-header">
+    <div class="header-item">
+      <a class="app-title" href="/">Todos</a>
+    </div>
+    <div class="header-item login">
+      {{#if currentUser}}
+        {{currentUser.profile.name}} (<a href="" data-logout>logout</a>)
+      {{else}}
+        {{#if loggingIn}}
+          Logging in...
+        {{else}}
+          <a href="" data-login>Login with Meteor</a>
+        {{/if}}
+      {{/if}}
+    </div>
+  </header>
+</template>
